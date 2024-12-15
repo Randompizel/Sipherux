@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Sipherux coin"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Sipherux Docs</title>
+
+
+ </head>
+
+<body>
+  <div class="background">
+     <div class="background-overlay"></div>
+  </div>
+  <header>
+    <div class="header-contents">
+        <div class="header-content"><a href="/"><img src="logo.jpg" alt="" class="header-logo"></a></div>  
+        <div class="header-content">
+            <div class="header-content-links left-side-seperator">
+              <a href="" class="header-content-link-txt">Docs</a>
+            </div>
+            <div class="header-content-links">
+              <a href="https://x.com/sipherux" target="_blank"><img src="https://images.seeklogo.com/logo-png/49/2/twitter-x-logo-png_seeklogo-492396.png?v=638686947660000000" alt="" class="header-icon-img"></a>  
+            </div>
+        </div>  
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="main-content-container">
+      <h1 class="main-content-container-title">Introduction</h1>  
+      <p class="main-content-container-description">Sipherux is a groundbreaking privacy-preserving order book protocol built on Solana that enables private, institutional-grade trading while maintaining the benefits of decentralized finance. By combining advanced zero-knowledge proofs with atomic swaps, Sipherux creates a new paradigm for anonymous on-chain trading.</p>
+      <h2 class="main-content-container-title-second">The Privacy Problem in DeFi</h2> 
+      <p class="main-content-container-description">Despite the common misconception of blockchain anonymity, all transactions on public chains are visible and traceable. When an address becomes associated with an identity, the entire transaction history is exposed. While basic mixing services provide rudimentary anonymity, they lack the comprehensive functionality needed for modern trading operations.</p>
+      <h2 class="main-content-container-title-second">The Sipherux Solution</h2> 
+      <p class="main-content-container-description">Sipherux addresses these challenges through three core innovations:</p>
+      <div class="main-content-container-containers-wrap">
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">Hidden Transaction Amounts</span> 
+          <p class="main-content-container-description">Utilizing Pedersen commitments to conceal transaction amounts while maintaining verifiability through homomorphic properties.</p>
+        </div>
+        <div class="main-content-container-container">
+            <span class="main-content-container-container-title">Untraceable Addresses</span> 
+            <p class="main-content-container-description">Implementing sophisticated one-time address generation inspired by Monero's privacy innovations.
+            </p>
+          </div>
+      </div>
+      <div class="main-content-container-containers-wrap">
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">Private Atomic Swaps</span> 
+          <p class="main-content-container-description">Enabling completely private trading while maintaining balance verification through zero-knowledge proofs.</p>
+        </div>
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">Institutional-Grade Performance</span> 
+          <p class="main-content-container-description">Built on Solana for high throughput, processing up to 1000 transactions per batch with sub-second finality.
+          </p>
+        </div>
+      </div>
+      <h2 class="main-content-container-title-second">Key Benefits</h2> 
+
+      <div class="main-content-container-containers-wrap">
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">MEV Protection</span> 
+          <p class="main-content-container-description">Prevents front-running, sandwich attacks, and other forms of value extraction common in traditional DEX models.</p>
+        </div>
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">Strategy Protection</span> 
+          <p class="main-content-container-description">Enables professional traders to maintain complete confidentiality of their trading strategies and patterns.
+          </p>
+        </div>
+      </div>
+
+      <div class="main-content-container-containers-wrap">
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">Scalable Architecture</span> 
+          <p class="main-content-container-description">Leverages Solana's high-performance infrastructure and implements efficient ZK Rollup technology.</p>
+        </div>
+        <div class="main-content-container-container">
+          <span class="main-content-container-container-title">Trustless Recovery</span> 
+          <p class="main-content-container-description">Incorporates an encrypted on-chain recovery mechanism that eliminates dependence on centralized services.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content-container">
+        <h1 class="main-content-container-title">Getting Started</h1>  
+        <p class="main-content-container-description">This guide will walk you through the process of integrating with Sipherux and executing your first private trade. We'll cover installation, key generation, and basic trading operations.</p>
+        
+        <h2 class="main-content-container-title-second">Prerequisites</h2> 
+
+        <div class="main-content-container-containers-wrap">
+          <div class="main-content-container-container">
+            <span class="main-content-container-container-title">Solana Environment</span> 
+            <p class="main-content-container-description">A Solana wallet with SOL for transaction fees and a basic understanding of Solana development.</p>
+          </div>
+          <div class="main-content-container-container">
+            <span class="main-content-container-container-title">Node.js Environment</span> 
+            <p class="main-content-container-description">Node.js version 16.0 or higher and npm/yarn package manager installed.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="main-content-container-title-second">Installation</h2> 
+        <p class="main-content-container-description">Install the Sipherux SDK using npm or yarn:</p>
+        <code class="main-content-container-code-wrap">
+           # Using npm
+
+           <br/>
+           <br/>
+
+           npm install @sipherux/sdk
+           <br/>
+           <br/>
+
+           # Using yarn
+           <br/>
+           <br/>
+
+           yarn add @sipherux/sdk
+        </code>  
+
+        <h2 class="main-content-container-title-second">Key Generation</h2> 
+        <p class="main-content-container-description">Generate your private viewing and spending keys. These are essential for creating private transactions and viewing your trading history:</p>
+
+        <code class="main-content-container-code-wrap">
+            import { generateKeys } from '@sipherux/sdk';
+            <br/>
+            <br/>
+ 
+            // Generate new key pair
+            <br/> 
+            const keys = await generateKeys();
+            <br/> 
+            console.log('Viewing Key:', keys.viewingKey);
+            <br/> 
+            console.log('Spending Key:', keys.spendingKey);
+            <br/>
+            <br/>
+ 
+            // IMPORTANT: Store these keys securely - they cannot be recovered if lost!
+         </code>  
+
+         <h2 class="main-content-container-title-second">Initialize the Client</h2> 
+         <p class="main-content-container-description">Create a new Sipherux client instance with your keys:</p>
+
+         <code class="main-content-container-code-wrap">
+            import { SipheruxClient } from '@sipherux/sdk';
+            <br/>
+            <br/>
+ 
+            const client = new SipheruxClient({            <br/>
+
+                network: 'mainnet', // or 'devnet' for testing            <br/>
+
+                viewingKey: keys.viewingKey,            <br/>
+
+                spendingKey: keys.spendingKey,            <br/>
+
+                commitment: 'confirmed'            <br/>
+
+            });            <br/>
+
+ 
+            // IMPORTANT: Store these keys securely - they cannot be recovered if lost!
+         </code>  
+
+         <h2 class="main-content-container-title-second">Your First Private Transaction</h2> 
+         <p class="main-content-container-description">Execute a basic private swap between tokens:</p>
+
+         <code class="main-content-container-code-wrap">
+           // Create a private swap order<br/><br/>
+           const order = await client.createOrder({<br/>
+               sellToken: 'SOL',<br/>
+               buyToken: 'USDC',<br/>
+               amount: 1.5,<br/>
+               priceLimit: 20.0, // Maximum price willing to pay<br/>
+               expirationTime: 3600 // Order expires in 1 hour<br/>
+           });<br/><br/>
+           
+           // Submit the order<br/>
+           const result = await client.submitOrder(order);<br/>
+           console.log('Order submitted:', result.orderId);
+         </code>  
+
+
+         <h2 class="main-content-container-title-second">Security Best Practices</h2> 
+
+         <div class="main-content-container-containers-wrap">
+           <div class="main-content-container-container">
+             <span class="main-content-container-container-title">Key Management</span> 
+             <p class="main-content-container-description">Store your viewing and spending keys securely. Consider using hardware security modules for production environments.</p>
+           </div>
+           <div class="main-content-container-container">
+             <span class="main-content-container-container-title">Network Selection</span> 
+             <p class="main-content-container-description">Always test your integration on devnet first before moving to mainnet.
+             </p>
+           </div>
+        
+         </div>
+
+         <div class="main-content-container-containers-wrap">
+            <div class="main-content-container-container">
+             <span class="main-content-container-container-title">Error Handling</span> 
+             <p class="main-content-container-description">Implement proper error handling and transaction monitoring to ensure successful order execution.
+             </p>
+           </div>
+          </div>
+      </div>
+
+
+      <div class="main-content-container">
+        <h1 class="main-content-container-title">Integration Guide</h1>  
+        <p class="main-content-container-description">Learn how to integrate Sipherux's privacy-preserving features into your DeFi application. This guide covers key integration patterns, from basic transaction privacy to advanced order book functionality.</p>
+        <h2 class="main-content-container-title-second">Core Components</h2> 
+        <div class="main-content-container-containers-wrap">
+          <div class="main-content-container-container">
+           <span class="main-content-container-container-title">Transaction Privacy</span> 
+           <p class="main-content-container-description">Implement private transactions using Pedersen commitments and zero-knowledge proofs.</p>
+          </div>
+          <div class="main-content-container-container">
+            <span class="main-content-container-container-title">Address Management</span> 
+            <p class="main-content-container-description">Generate and manage one-time addresses for enhanced privacy.</p>
+           </div>
+           <div class="main-content-container-container">
+            <span class="main-content-container-container-title">Order Book</span> 
+            <p class="main-content-container-description">Interface with the private order book system for matching trades.</p>
+           </div>
+        </div>
+
+        <h2 class="main-content-container-title-second">Private Transaction Integration</h2> 
+        <p class="main-content-container-description">Private Transaction Integration</p>
+
+        <code class="main-content-container-code-wrap">
+            import { SipheruxClient, generateProof } from '@sipherux/sdk';</br></br>
+
+            // Initialize client with privacy settings</br>
+            const client = new SipheruxClient({</br>
+                network: 'mainnet',</br>
+                viewingKey: process.env.VIEWING_KEY,</br>
+                spendingKey: process.env.SPENDING_KEY,</br>
+                privacyLevel: 'maximum' // Enables all privacy features</br>
+            });</br></br>
+            
+            // Create a private transfer</br>
+            async function createPrivateTransfer(amount, recipient) {</br>
+                // Generate zero-knowledge proof</br>
+                const proof = await generateProof({</br>
+                    amount,</br>
+                    recipient,</br>
+                    randomness: client.generateRandomness()</br>
+                });</br></br>
+            
+                // Create commitment</br>
+                const commitment = await client.createCommitment(amount, proof);</br></br>
+            
+                // Execute private transfer</br>
+                const transaction = await client.transfer({</br>
+                    commitment,</br>
+                    proof,</br>
+                    recipient,</br>
+                    memo: 'Private Transfer'</br>
+                });</br></br>
+            
+                return transaction;</br>
+            }
+        </code>  
+
+        <h2 class="main-content-container-title-second">Order Book Implementation</h2> 
+        <p class="main-content-container-description">Integrate with Sipherux's private order book system:</p>
+
+
+        <code class="main-content-container-code-wrap">
+            // Subscribe to order book updates <br/>
+            client.subscribeToOrderBook('SOL/USDC', (updates) => {<br/>
+                // Handle order book updates while maintaining privacy<br/>
+                console.log('Received private order book update');<br/>
+            });<br/><br/>
+            
+            // Place a private limit order<br/>
+            async function placeLimitOrder(pair, side, amount, price) {<br/>
+                // Generate order commitment<br/>
+                const orderCommitment = await client.createOrderCommitment({<br/>
+                    pair,<br/>
+                    side,<br/>
+                    amount,<br/>
+                    price<br/>
+                });<br/><br/>
+            
+                // Submit private order<br/>
+                const order = await client.submitOrder({<br/>
+                    commitment: orderCommitment,<br/>
+                    proof: await generateProof(orderCommitment),<br/>
+                    expirationTime: Date.now() + 3600000 // 1 hour<br/>
+                });<br/><br/>
+            
+                return order;<br/>
+            }
+        </code>  
+
+        <h2 class="main-content-container-title-second">Event Handling</h2> 
+        <p class="main-content-container-description">Implement event handlers for order updates and matches:</p>
+
+        <code class="main-content-container-code-wrap">
+            // Listen for private order events <br/>
+            client.on('orderMatched', async (event) => {<br/>
+                // Verify the match proof<br/>
+                const isValid = await client.verifyMatchProof(event.proof);<br/><br/>
+                
+                if (isValid) {<br/>
+                    // Process the private match<br/>
+                    await processMatch(event);<br/>
+                }<br/>
+            });<br/><br/>
+            
+            // Handle order status updates<br/>
+            client.on('orderUpdate', (update) => {<br/>
+                // Update UI while maintaining privacy<br/>
+                console.log('Order status:', update.status);<br/>
+            });
+        </code>  
+
+        <h2 class="main-content-container-title-second">Advanced Privacy Features</h2> 
+        
+        <div class="main-content-container-containers-wrap">
+            <div class="main-content-container-container">
+             <span class="main-content-container-container-title">Ring Signatures</span> 
+             <p class="main-content-container-description">Implement ring signatures for enhanced transaction privacy:</p>
+             <code class="main-content-container-code-wrap">
+                const ringSignature = await client.createRingSignature({<br/>
+                    amount,<br/>
+                    mixinLevel: 11, // Number of decoys<br/>
+                    ringSize: 12    // Total ring size<br/>
+                });
+            </code>  
+            </div>
+
+            <div class="main-content-container-container">
+                <span class="main-content-container-container-title">Stealth Addresses</span> 
+                <p class="main-content-container-description">Generate one-time stealth addresses for enhanced privacy:</p>
+                <code class="main-content-container-code-wrap">
+                    const stealthAddress = await client.generateStealthAddress({<br/>
+                        recipient: publicKey,<br/>
+                        oneTime: true<br/>
+                    });
+               </code>  
+               </div>
+          </div>
+
+
+
+          <h2 class="main-content-container-title-second">Integration Best Practices</h2> 
+        
+          <div class="main-content-container-containers-wrap">
+              <div class="main-content-container-container">
+               <span class="main-content-container-container-title">Error Handling</span> 
+               <p class="main-content-container-description">Implement comprehensive error handling for all privacy-related operations. Always verify proofs and signatures before processing transactions.</p>
+               
+              </div>
+  
+              <div class="main-content-container-container">
+                  <span class="main-content-container-container-title">State Management</span> 
+                  <p class="main-content-container-description">Maintain local state for faster retrieval while ensuring all sensitive data is encrypted.</p>
+              </div>
+
+              <div class="main-content-container-container">
+                <span class="main-content-container-container-title">Performance Optimization</span> 
+                <p class="main-content-container-description">Batch proof generation and verification when possible. Cache frequently used commitments and proofs.</p>
+            </div>
+            </div>
+    </div>
+
+
+
+
+    <div class="main-content-container">
+        <h1 class="main-content-container-title">API Reference</h1>  
+        <p class="main-content-container-description">Complete reference documentation for the Sipherux SDK. All methods are available through theSipheruxClient instance.</p>
+        <h2 class="main-content-container-title-second">Client Configuration</h2> 
+        <code class="main-content-container-code-wrap">
+            interface ClientConfig {<br/>
+                network: 'mainnet' | 'devnet';<br/>
+                viewingKey: string;<br/>
+                spendingKey: string;<br/>
+                commitment?: 'processed' | 'confirmed' | 'finalized';<br/>
+                endpoint?: string;<br/>
+                privacyLevel?: 'standard' | 'maximum';<br/>
+                maxRetries?: number;<br/>
+                timeout?: number;<br/>
+            }
+       </code>  
+       <h2 class="main-content-container-title-second">Core Methods</h2> 
+       <h2 class="main-content-container-title-second">Transaction Methods</h2> 
+
+       <code class="main-content-container-code-wrap">
+        // Create a private transaction<br/><br/>
+        async createTransaction(params: {<br/>
+            amount: number;<br/>
+            recipient: string;<br/>
+            memo?: string;<br/>
+            expirationTime?: number;<br/>
+        }): Promise;<br/><br/>
+        
+        // Submit a transaction to the network<br/>
+        async submitTransaction(<br/>
+            transaction: Transaction<br/>
+        ): Promise<{ <br/>
+            txId: string;<br/>
+            status: TransactionStatus;<br/>
+        }>;<br/><br/>
+        
+        // Get transaction status<br/>
+        async getTransactionStatus(<br/>
+            txId: string<br/>
+        ): Promise;<br/><br/>
+        
+        // Get transaction history (viewable with viewing key)<br/>
+        async getTransactionHistory(params?: {<br/>
+            startTime?: number;<br/>
+            endTime?: number;<br/>
+            limit?: number;<br/>
+            offset?: number;<br/>
+        }): Promise;<br/>
+        </code>  
+
+        <h2 class="main-content-container-title-second">Order Book Methods</h2> 
+
+        <code class="main-content-container-code-wrap">
+            // Create and submit an order <br/><br/>
+            async createOrder(params: {<br/>
+                pair: string;<br/>
+                side: 'buy' | 'sell';<br/>
+                amount: number;<br/>
+                price: number;<br/>
+                type: 'limit' | 'market';<br/>
+                expirationTime?: number;<br/>
+            }): Promise;<br/><br/>
+            
+            // Cancel an existing order<br/>
+            async cancelOrder(<br/>
+                orderId: string<br/>
+            ): Promise;<br/><br/>
+            
+            // Get order status<br/>
+            async getOrderStatus(<br/>
+                orderId: string<br/>
+            ): Promise;<br/><br/>
+            
+            // Subscribe to order book updates<br/>
+            subscribeToOrderBook(<br/>
+                pair: string,<br/>
+                callback: (update: OrderBookUpdate) => void<br/>
+            ): Subscription;<br/>
+        </code>  
+
+        <h2 class="main-content-container-title-second">Privacy Methods</h2> 
+
+        <code class="main-content-container-code-wrap">
+            // Generate a new stealth address <br/><br/>
+            async generateStealthAddress(params: {<br/>
+                recipient: string;<br/>
+                oneTime?: boolean;<br/>
+            }): Promise;<br/><br/>
+            
+            // Create commitment for amount<br/>
+            async createCommitment(<br/>
+                amount: number,<br/>
+                randomness?: string<br/>
+            ): Promise;<br/><br/>
+            
+            // Generate zero-knowledge proof<br/>
+            async generateProof(params: {<br/>
+                amount: number;<br/>
+                recipient: string;<br/>
+                randomness: string;<br/>
+            }): Promise;<br/><br/>
+            
+            // Verify a proof<br/>
+            async verifyProof(<br/>
+                proof: Proof<br/>
+            ): Promise;<br/>
+        </code> 
+
+        <h2 class="main-content-container-title-second">Event System</h2> 
+
+        <code class="main-content-container-code-wrap">
+            // Available events <br/>
+            type SipheruxEvent =<br/>
+                | 'orderCreated'<br/>
+                | 'orderMatched'<br/>
+                | 'orderCancelled'<br/>
+                | 'transactionConfirmed'<br/>
+                | 'proofGenerated'<br/>
+                | 'error';<br/><br/>
+            
+            // Event subscription<br/>
+            client.on(<br/>
+                event: SipheruxEvent,<br/>
+                callback: (data: any) => void<br/>
+            ): void;<br/><br/>
+            
+            // Example usage<br/>
+            client.on('orderMatched', (event) => {<br/>
+                console.log('Order matched:', event.orderId);<br/>
+            });
+        </code> 
+
+        <h2 class="main-content-container-title-second">Types</h2> 
+
+        <code class="main-content-container-code-wrap">
+            interface Transaction {<br/>
+                id: string;<br/>
+                amount: number;<br/>
+                recipient: string;<br/>
+                timestamp: number;<br/>
+                status: TransactionStatus;<br/>
+                proof: Proof;<br/>
+                memo?: string;<br/>
+            }<br/><br/>
+            
+            interface Order {<br/>
+                id: string;<br/>
+                pair: string;<br/>
+                side: 'buy' | 'sell';<br/>
+                amount: number;<br/>
+                price: number;<br/>
+                type: 'limit' | 'market';<br/>
+                status: OrderStatus;<br/>
+                timestamp: number;<br/>
+                expirationTime?: number;<br/>
+            }<br/><br/>
+            
+            interface Proof {<br/>
+                commitment: string;<br/>
+                nullifier: string;<br/>
+                root: string;<br/>
+                proof: string[];<br/>
+            }<br/><br/>
+            
+            type TransactionStatus = <br/>
+                | 'pending'<br/>
+                | 'confirmed'<br/>
+                | 'failed';<br/><br/>
+            
+            type OrderStatus =<br/>
+                | 'open'<br/>
+                | 'partially_filled'<br/>
+                | 'filled'<br/>
+                | 'cancelled';<br/>
+        </code> 
+
+        <h2 class="main-content-container-title-second">Error Handling</h2> 
+        <code class="main-content-container-code-wrap">
+            class SipheruxError extends Error { <br/>
+                code: string;<br/>
+                details?: any;<br/>
+            }<br/><br/>
+            
+            // Error codes<br/>
+            type ErrorCode =<br/>
+                | 'INVALID_PROOF'<br/>
+                | 'INSUFFICIENT_BALANCE'<br/>
+                | 'INVALID_COMMITMENT'<br/>
+                | 'ORDER_EXPIRED'<br/>
+                | 'NETWORK_ERROR'<br/>
+                | 'UNAUTHORIZED';<br/><br/>
+            
+            // Error handling example<br/>
+            try {<br/>
+                await client.submitOrder(order);<br/>
+            } catch (error) {<br/>
+                if (error instanceof SipheruxError) {<br/>
+                    console.error(`Error ${error.code}:`, error.message);<br/>
+                }<br/><br/>
+            }
+        </code> 
+
+    </div>
+
+    <div class="main-content-container">
+        <h1 class="main-content-container-title">Examples</h1>  
+        <p class="main-content-container-description">Practical examples demonstrating common use cases and integration patterns with the Sipherux SDK.</p>
+        <h2 class="main-content-container-title-second">Basic Private Trading</h2> 
+        <p class="main-content-container-description">Implement a basic private trading system with order creation and monitoring:</p>
+        <code class="main-content-container-code-wrap">
+            import { SipheruxClient } from '@sipherux/sdk'; <br/><br/>
+
+            // Initialize client<br/>
+            const client = new SipheruxClient({<br/>
+                network: 'mainnet',<br/>
+                viewingKey: process.env.VIEWING_KEY,<br/>
+                spendingKey: process.env.SPENDING_KEY<br/>
+            });
+            <br/><br/>
+            // Create and monitor a private order<br/>
+            async function executePrivateTrade() {<br/>
+                try {<br/>
+                    // Create order<br/>
+                    const order = await client.createOrder({<br/>
+                        pair: 'SOL/USDC',<br/>
+                        side: 'buy',<br/>
+                        amount: 10,<br/>
+                        price: 20.5,<br/>
+                        type: 'limit'<br/>
+                    });
+                    <br/><br/>
+                    console.log('Order created:', order.id);<br/><br/>
+            
+                    // Monitor order status<br/>
+                    client.on('orderMatched', (event) => {<br/>
+                        if (event.orderId === order.id) {<br/>
+                            console.log('Order matched:', event);<br/>
+                        }<br/>
+                    });<br/><br/>
+            
+                    // Check status periodically<br/>
+                    const interval = setInterval(async () => {<br/>
+                        const status = await client.getOrderStatus(order.id);<br/>
+                        console.log('Order status:', status);<br/><br/>
+            
+                        if (status === 'filled') {<br/>
+                            clearInterval(interval);<br/>
+                        }<br/>
+                    }, 5000);<br/>
+            
+                } catch (error) {<br/>
+                    console.error('Trade error:', error);<br/>
+                }<br/>
+            }
+        </code> 
+
+        <h1 class="main-content-container-title">Private Market Making</h1>  
+        <p class="main-content-container-description">Implement a basic market making strategy with privacy features:</p>
+
+        <code class="main-content-container-code-wrap">
+            async function runMarketMaker() { <br/>
+                // Track active orders<br/>
+                const activeOrders = new Map();<br/><br/>
+            
+                // Subscribe to order book updates<br/>
+                client.subscribeToOrderBook('SOL/USDC', async (update) => {<br/>
+                    const spread = calculateSpread(update);<br/><br/>
+                    
+                    // If spread is wide enough, place new orders<br/>
+                    if (spread > 0.5) {<br/>
+                        // Create buy order slightly above best bid<br/>
+                        const buyOrder = await client.createOrder({<br/>
+                            pair: 'SOL/USDC',<br/>
+                            side: 'buy',<br/>
+                            amount: 5,<br/>
+                            price: update.bestBid * 1.001,<br/>
+                            type: 'limit'<br/>
+                        });<br/>
+                        activeOrders.set(buyOrder.id, buyOrder);<br/><br/>
+            
+                        // Create sell order slightly below best ask<br/>
+                        const sellOrder = await client.createOrder({<br/>
+                            pair: 'SOL/USDC',<br/>
+                            side: 'sell',<br/>
+                            amount: 5,<br/>
+                            price: update.bestAsk * 0.999,<br/>
+                            type: 'limit'<br/>
+                        });<br/>
+                        activeOrders.set(sellOrder.id, sellOrder);<br/>
+                    }<br/>
+                });<br/><br/>
+            
+                // Monitor and manage orders<br/>
+                client.on('orderMatched', async (event) => {<br/>
+                    const order = activeOrders.get(event.orderId);<br/>
+                    if (order) {<br/>
+                        // Place new order on the opposite side<br/>
+                        const newOrder = await client.createOrder({<br/>
+                            pair: 'SOL/USDC',<br/>
+                            side: order.side === 'buy' ? 'sell' : 'buy',<br/>
+                            amount: 5,<br/>
+                            price: calculateNewPrice(order),<br/>
+                            type: 'limit'<br/>
+                        });<br/>
+                        activeOrders.set(newOrder.id, newOrder);<br/>
+                        activeOrders.delete(event.orderId);<br/>
+                    }<br/>
+                });<br/>
+            }
+        </code> 
+
+
+        <h1 class="main-content-container-title">Batch Order Processing</h1>  
+        <p class="main-content-container-description">Process multiple orders efficiently while maintaining privacy:</p>
+
+        <code class="main-content-container-code-wrap">
+            async function processBatchOrders(orders) {<br/>
+                // Generate proofs in parallel<br/>
+                const proofs = await Promise.all(<br/>
+                    orders.map(order => <br/>
+                        client.generateProof({<br/>
+                            amount: order.amount,<br/>
+                            recipient: order.recipient,<br/>
+                            randomness: client.generateRandomness()<br/>
+                        })<br/>
+                    )<br/>
+                );<br/><br/>
+            
+                // Create commitments<br/>
+                const commitments = await Promise.all(<br/>
+                    orders.map((order, i) => <br/>
+                        client.createCommitment(order.amount, proofs[i])<br/>
+                    )<br/>
+                );
+                <br/><br/>
+                // Submit orders in batch<br/>
+                const results = await Promise.all(<br/>
+                    orders.map((order, i) => <br/>
+                        client.submitOrder({<br/>
+                            ...order,<br/>
+                            commitment: commitments[i],<br/>
+                            proof: proofs[i]<br/>
+                        })<br/>
+                    )<br/>
+                );<br/><br/>
+            
+                return results;<br/>
+            }
+        </code> 
+
+        <h1 class="main-content-container-title">Private Order History Analysis</h1>  
+        <p class="main-content-container-description">Analyze trading history while maintaining privacy:</p>
+
+        <code class="main-content-container-code-wrap">
+            async function analyzeTradeHistory() { <br/>
+                // Get trading history for last 30 days<br/>
+                const endTime = Date.now();<br/>
+                const startTime = endTime - (30 * 24 * 60 * 60 * 1000);<br/><br/>
+            
+                const history = await client.getTransactionHistory({<br/>
+                    startTime,<br/>
+                    endTime<br/>
+                });<br/><br/>
+            
+                // Analyze trades<br/>
+                const analysis = history.reduce((acc, trade) => {<br/>
+                    // Calculate total volume<br/>
+                    acc.totalVolume += trade.amount;<br/><br/>
+            
+                    // Track success rate<br/>
+                    acc.successCount += trade.status === 'confirmed' ? 1 : 0;<br/><br/>
+            
+                    // Calculate average trade size<br/>
+                    acc.trades.push(trade.amount);<br/>
+                    acc.avgTradeSize = acc.trades.reduce((a, b) => a + b) / acc.trades.length;<br/><br/>
+            
+                    return acc;<br/>
+                }, {<br/>
+                    totalVolume: 0,<br/>
+                    successCount: 0,<br/>
+                    trades: [],<br/>
+                    avgTradeSize: 0<br/>
+                });<br/><br/>
+            
+                // Calculate success rate<br/>
+                analysis.successRate = (analysis.successCount / history.length) * 100;<br/><br/>
+            
+                return analysis;<br/>
+            }
+        </code> 
+
+        <h1 class="main-content-container-title">Error Recovery Patterns</h1>  
+        <p class="main-content-container-description">Implement robust error handling and recovery:</p>
+
+        <code class="main-content-container-code-wrap">
+          async function executeWithRetry(operation, maxRetries = 3) { <br/>
+              let lastError;
+              <br/><br/>
+              for (let attempt = 1; attempt <= maxRetries; attempt++) {<br/>
+                  try {<br/>
+                      return await operation();<br/>
+                  } catch (error) {<br/>
+                      lastError = error;<br/><br/>
+                      
+                      if (error instanceof SipheruxError) {<br/>
+                          switch (error.code) {<br/>
+                              case 'INVALID_PROOF':<br/>
+                                  // Regenerate proof and retry<br/>
+                                  await regenerateProof();<br/>
+                                  break;<br/><br/>
+                              
+                              case 'NETWORK_ERROR':<br/>
+                                  // Wait before retry<br/>
+                                  await new Promise(resolve => <br/>
+                                      setTimeout(resolve, attempt * 1000)<br/>
+                                  );<br/>
+                                  break;<br/><br/>
+                              
+                              case 'UNAUTHORIZED':<br/>
+                                  // Fatal error, don't retry<br/>
+                                  throw error;<br/><br/>
+                              
+                              default:<br/>
+                                  // Log error and retry<br/>
+                                  console.error(<br/>
+                                      `Attempt ${attempt} failed:`, <br/>
+                                      error.message<br/>
+                                  );<br/>
+                          }<br/>
+                      }<br/>
+                  }<br/>
+              }<br/><br/>
+              
+              throw lastError;<br/>
+          }
+        </code>
+
+      </div>
+  </div>
+</body>
+</html>
